@@ -1,0 +1,6 @@
+playsound
+googletrans
+SpeechRecognition
+PyAudio
+gTTs
+gTTS-token
