@@ -4,5 +4,4 @@ google-trans-new
 gTTS
 playsound
 deep-translator
-subprocess.run
 pyautogui
