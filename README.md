@@ -1,5 +1,5 @@
 <div align="center">
-<h1> Real-Time Voice Translator </h1> <a href="#"><img alt="language" src="https://github.com/SamirPaul1/real-time-voice-translator/assets/132539454/5d9bd32d-48d3-474b-9108-5961179ab9af"></a>
+<h1> Real-Time Voice🎙️ Translator🔊 </h1> <a href="#"><img alt="language" src="https://github.com/SamirPaul1/real-time-voice-translator/assets/132539454/5d9bd32d-48d3-474b-9108-5961179ab9af"></a>
 
 A machine learning project that translates voice from one language to another in real-time while preserving the tone and emotion of the speaker, and outputs the result in MP3 format.
 </div>
