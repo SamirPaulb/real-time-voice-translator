@@ -1,6 +1,8 @@
-playsound
-googletrans
 SpeechRecognition
-PyAudio
-gTTs
-gTTS-token
+pyaudio
+google-trans-new
+gTTS
+playsound
+deep-translator
+subprocess.run
+pyautogui
