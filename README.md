@@ -32,9 +32,8 @@ A machine learning project that translates voice from one language to another in
     ```
 
 
-
 ### Problems and Solutions
-- **Google Translate API error 404**: This error occurs when the Google Translate API is not available or the request is not valid. To fix this, we will use the ```deep_translator``` library instead of ```google_trans_new```.
+- **Google Translate API error 404**: This error occurs when the Google Translate API is not available or the request is not valid. To fix this, we will use the ```deep_translator``` library instead of ```google_trans_new```. [problem](https://stackoverflow.com/questions/74241589/) [solution](https://deep-translator.readthedocs.io/en/latest/usage.html#google-translate)
 - **Speech recognition does not work for continuous input**: The ```speech_recognition.Recognizer().listen()``` method does not work for continuous input data. To fix this, we will use the ```record()``` method with a timer.
 
 ### TODO
