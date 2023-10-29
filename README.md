@@ -1,11 +1,11 @@
 <div align="center">
-<h1> Real-Time Voice🎙️ Translator🔊 </h1> <a href="#"><img alt="language" src="https://github.com/SamirPaul1/real-time-voice-translator/assets/132539454/5d9bd32d-48d3-474b-9108-5961179ab9af"></a>
+<h1> Real-Time Voice🎙️ Translator🔊 </h1> <a href="#"><img alt="language" src="https://github.com/SamirPaulb/real-time-voice-translator/assets/132539454/5d9bd32d-48d3-474b-9108-5961179ab9af"></a>
 
 A machine learning project that translates voice from one language to another in real-time while preserving the tone and emotion of the speaker, and outputs the result in MP3 format.
 </div>
 
 ### Dependencies
-    Python3, SpeechRecognition, pyaudio, google-trans-new, gTTS, playsound, deep-translator
+    Python3, SpeechRecognition, pyaudio, google-trans-new, gTTS, playsound, deep-translator, cx-Freeze
 
 ### Getting started
 
@@ -31,10 +31,6 @@ A machine learning project that translates voice from one language to another in
     python main.py
     ```
 
+### Install Desktop Application
+I am using [cx_Freeze](https://github.com/marcelotduarte/cx_Freeze/tree/main) to build executable file of this app. The build settings can be changed by modifying the setup.py file.
 
-### Problems and Solutions
-- **Google Translate API error 404**: This error occurs when the Google Translate API is not available or the request is not valid. To fix this, we will use the ```deep_translator``` library instead of ```google_trans_new```. [problem](https://stackoverflow.com/questions/74241589/) [solution](https://deep-translator.readthedocs.io/en/latest/usage.html#google-translate)
-- **Speech recognition does not work for continuous input**: The ```speech_recognition.Recognizer().listen()``` method does not work for continuous input data. To fix this, we will use the ```record()``` method with a timer.
-
-### TODO
-Update the ```record()``` timer to listen until the speaker stops speaking.
