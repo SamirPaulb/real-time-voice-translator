@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: cx-Logging
+Version: 3.1.0
+Summary: Python and C interfaces for logging
+Author-email: Anthony Tuininga <anthony.tuininga@gmail.com>
+License: Python Software Foundation License
+Project-URL: Homepage, https://github.com/anthony-tuininga/cx_Logging
+Keywords: logging
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+
+Open Source Python Utility - cx_Logging
+
+cx_Logging is a Python extension module which operates in a fashion similar to
+the logging module that ships with Python 2.3 and higher. It also has a C
+interface which allows applications to perform logging independently of Python.
+
+This project is being released to the public since other projects that are
+available publicly depend on this module.
+
+Please see the included documentation for additional information. Note that
+the documentation is a work in progress. It is currently only suitable as
+reference material but I intend to supplement this documentation over time.
+
