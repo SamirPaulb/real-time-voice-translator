@@ -6,12 +6,11 @@ setup(
     name="voice-translator",
     version="0.1",
     description="Real-Time Voice Translator GUI",
-    executables=[Executable("main.py")],
+    executables=[Executable("main.py", base=base, icon="icon.ico", targetName=voice-translator.exe)],
     options={
         "build_exe": {
-            "include_files": [("icon.png")],
-            "zip_include_packages": ["env/"],
-            "zip_exclude_packages": [],
+            "include_files": [("icon.png", "icon.ico")],
+            "zip_include_packages": ["env/"]            
         }
     },
 )
