@@ -32,5 +32,13 @@ A machine learning project that translates voice from one language to another in
     ```
 
 ### Install Desktop Application
-I am using [cx_Freeze](https://github.com/marcelotduarte/cx_Freeze/tree/main) to build executable file of this app. The build settings can be changed by modifying the setup.py file.
+I am using [cx_Freeze](https://github.com/marcelotduarte/cx_Freeze/tree/main) to build executable file of this app. The build settings can be changed by modifying the [setup.py](./setup.py) file.
 
+- Build option:
+    ```
+    python setup.py build
+    ```
+- Installer containing all the files:
+    ```
+    python setup.py bdist_msi
+    ```
