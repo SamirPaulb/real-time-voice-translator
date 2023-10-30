@@ -1,5 +1,5 @@
 <div align="center">
-<h1> Real-Time Voice🎙️ Translator🔊 </h1> <a href="#"><img alt="language" src="https://github.com/SamirPaulb/real-time-voice-translator/assets/132539454/5d9bd32d-48d3-474b-9108-5961179ab9af"></a>
+<h1> Real-Time Voice🎙️ Translator🔊 </h1> <a href="#"><img alt="language" src="https://user-images.githubusercontent.com/132539454/278971782-9453805e-e2e6-4d99-b1de-cf8fcd3e7105.svg"></a>
 
 A machine learning project that translates voice from one language to another in real-time while preserving the tone and emotion of the speaker, and outputs the result in MP3 format.
 </div>
@@ -31,7 +31,9 @@ A machine learning project that translates voice from one language to another in
     python main.py
     ```
 
-### Install Desktop Application
+### Install Desktop Application <a href="https://github.com/SamirPaulb/real-time-voice-translator/releases/latest">
+<img src="https://user-images.githubusercontent.com/132539454/278971282-8d676023-a03a-463c-8e55-3f0afe6e3e58.svg" alt="DOWNLOAD">
+</a>
 I am using [cx_Freeze](https://github.com/marcelotduarte/cx_Freeze/tree/main) to build executable file of this app. The build settings can be changed by modifying the [setup.py](./setup.py) file.
 
 - Build option:
