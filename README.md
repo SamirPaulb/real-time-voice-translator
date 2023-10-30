@@ -31,15 +31,11 @@ A machine learning project that translates voice from one language to another in
     python main.py
     ```
 
-### Install Desktop Application <a href="https://github.com/SamirPaulb/real-time-voice-translator/releases/latest"><img src="https://user-images.githubusercontent.com/132539454/278971282-8d676023-a03a-463c-8e55-3f0afe6e3e58.svg" alt="DOWNLOAD"></a>
+### Install Windows/Linux/Mac Application <a href="https://github.com/SamirPaulb/real-time-voice-translator/releases/latest"><img src="https://user-images.githubusercontent.com/132539454/278971282-8d676023-a03a-463c-8e55-3f0afe6e3e58.svg" alt="DOWNLOAD"></a>
 
 I am using <a href="https://github.com/marcelotduarte/cx_Freeze/tree/main">cx_Freeze</a> to build executable file of this app. The build settings can be changed by modifying the <a href="https://github.com/SamirPaulb/real-time-voice-translator/blob/main/setup.py">setup.py</a> file.
 
-- Build option:
-    ```
-    python setup.py build
-    ```
-- Installer containing all the files:
-    ```
-    python setup.py bdist_msi
-    ```
+##### Build installer containing all the files:
+- Windows: ```python setup.py bdist_msi```
+- Linux: ```python setup.py bdist_rpm```
+- Mac: ```python setup.py bdist_mac```
