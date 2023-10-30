@@ -31,8 +31,7 @@ A machine learning project that translates voice from one language to another in
     python main.py
     ```
 
-### Install Desktop Application <a href="https://github.com/SamirPaulb/real-time-voice-translator/releases/latest">
-<img src="https://user-images.githubusercontent.com/132539454/278971282-8d676023-a03a-463c-8e55-3f0afe6e3e58.svg" alt="DOWNLOAD">
+### Install Desktop Application <a href="https://github.com/SamirPaulb/real-time-voice-translator/releases/latest"><img src="https://user-images.githubusercontent.com/132539454/278971282-8d676023-a03a-463c-8e55-3f0afe6e3e58.svg" alt="DOWNLOAD">
 </a>
 I am using [cx_Freeze](https://github.com/marcelotduarte/cx_Freeze/tree/main) to build executable file of this app. The build settings can be changed by modifying the [setup.py](./setup.py) file.
 
