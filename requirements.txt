@@ -1,7 +1,7 @@
-SpeechRecognition
-pyaudio
-google-trans-new
 gTTS
-playsound
-deep-translator
+pyaudio
+playsound==1.2.2
 cx-Freeze
+deep-translator
+SpeechRecognition
+google-transliteration-api

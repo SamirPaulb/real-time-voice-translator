@@ -1,11 +1,13 @@
-import tkinter as tk
-from tkinter import ttk
-import threading
-import speech_recognition as sr
-from deep_translator import GoogleTranslator
-from gtts import gTTS
-from playsound import playsound
 import os
+import threading
+import tkinter as tk
+from gtts import gTTS
+from tkinter import ttk
+import speech_recognition as sr
+from playsound import playsound
+from deep_translator import GoogleTranslator
+from google.transliteration import transliterate_text
+
 
 # Create an instance of Tkinter frame or window
 win= tk.Tk()
@@ -99,14 +101,15 @@ def update_translation():
             
             try:
                 speech_text = r.recognize_google(audio)
-                print(speech_text)
-                input_text.insert(tk.END, f"{speech_text}\n")
+                # print(speech_text)
+                speech_text_transliteration = transliterate_text(speech_text, lang_code=input_lang.get()) if input_lang.get() != 'auto' else speech_text
+                input_text.insert(tk.END, f"{speech_text_transliteration}\n")
                 if speech_text.lower() in {'exit', 'stop'}:
                     keep_running = False
                     return
                 
-                translated_text = GoogleTranslator(source=input_lang.get(), target=output_lang.get()).translate(text=speech_text)
-                print(translated_text)
+                translated_text = GoogleTranslator(source=input_lang.get(), target=output_lang.get()).translate(text=speech_text_transliteration)
+                # print(translated_text)
 
                 voice = gTTS(translated_text, lang=output_lang.get())
                 voice.save('voice.mp3')

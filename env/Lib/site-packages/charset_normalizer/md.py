@@ -9,6 +9,8 @@ from .constant import (
 )
 from .utils import (
     is_accentuated,
+    is_arabic,
+    is_arabic_isolated_form,
     is_case_variable,
     is_cjk,
     is_emoticon,
@@ -127,8 +129,9 @@ class TooManyAccentuatedPlugin(MessDetectorPlugin):
 
     @property
     def ratio(self) -> float:
-        if self._character_count == 0 or self._character_count < 8:
+        if self._character_count < 8:
             return 0.0
+
         ratio_of_accentuation: float = self._accentuated_count / self._character_count
         return ratio_of_accentuation if ratio_of_accentuation >= 0.35 else 0.0
 
@@ -233,15 +236,12 @@ class SuspiciousRange(MessDetectorPlugin):
 
     @property
     def ratio(self) -> float:
-        if self._character_count == 0:
+        if self._character_count <= 24:
             return 0.0
 
         ratio_of_suspicious_range_usage: float = (
             self._suspicious_successive_range_count * 2
         ) / self._character_count
-
-        if ratio_of_suspicious_range_usage < 0.1:
-            return 0.0
 
         return ratio_of_suspicious_range_usage
 
@@ -295,7 +295,11 @@ class SuperWeirdWordPlugin(MessDetectorPlugin):
                     self._is_current_word_bad = True
                 # Word/Buffer ending with an upper case accentuated letter are so rare,
                 # that we will consider them all as suspicious. Same weight as foreign_long suspicious.
-                if is_accentuated(self._buffer[-1]) and self._buffer[-1].isupper():
+                if (
+                    is_accentuated(self._buffer[-1])
+                    and self._buffer[-1].isupper()
+                    and all(_.isupper() for _ in self._buffer) is False
+                ):
                     self._foreign_long_count += 1
                     self._is_current_word_bad = True
             if buffer_length >= 24 and self._foreign_long_watch:
@@ -454,6 +458,34 @@ class ArchaicUpperLowerPlugin(MessDetectorPlugin):
         return self._successive_upper_lower_count_final / self._character_count
 
 
+class ArabicIsolatedFormPlugin(MessDetectorPlugin):
+    def __init__(self) -> None:
+        self._character_count: int = 0
+        self._isolated_form_count: int = 0
+
+    def reset(self) -> None:  # pragma: no cover
+        self._character_count = 0
+        self._isolated_form_count = 0
+
+    def eligible(self, character: str) -> bool:
+        return is_arabic(character)
+
+    def feed(self, character: str) -> None:
+        self._character_count += 1
+
+        if is_arabic_isolated_form(character):
+            self._isolated_form_count += 1
+
+    @property
+    def ratio(self) -> float:
+        if self._character_count < 8:
+            return 0.0
+
+        isolated_form_usage: float = self._isolated_form_count / self._character_count
+
+        return isolated_form_usage
+
+
 @lru_cache(maxsize=1024)
 def is_suspiciously_successive_range(
     unicode_range_a: Optional[str], unicode_range_b: Optional[str]
@@ -520,6 +552,8 @@ def is_suspiciously_successive_range(
         if "Punctuation" in unicode_range_a or "Punctuation" in unicode_range_b:
             return False
         if "Forms" in unicode_range_a or "Forms" in unicode_range_b:
+            return False
+        if unicode_range_a == "Basic Latin" or unicode_range_b == "Basic Latin":
             return False
 
     return True
