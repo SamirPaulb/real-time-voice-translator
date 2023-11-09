@@ -45,3 +45,8 @@ I am using <a href="https://github.com/marcelotduarte/cx_Freeze/tree/main">cx_Fr
 - Windows: ```python setup.py bdist_msi```
 - Linux: ```python setup.py bdist_rpm```
 - Mac: ```python setup.py bdist_mac```
+
+
+### GUI 
+<a href="#"><img alt="App GUI" src="https://github.com/SamirPaulb/real-time-voice-translator/assets/77569653/93855587-ef71-466c-9a3b-dd438e05ba56"></a>
+
