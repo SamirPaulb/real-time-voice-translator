@@ -48,5 +48,5 @@ I am using <a href="https://github.com/marcelotduarte/cx_Freeze/tree/main">cx_Fr
 
 
 ### GUI 
-<a href="#"><img alt="App GUI" src="https://github.com/SamirPaulb/real-time-voice-translator/assets/77569653/93855587-ef71-466c-9a3b-dd438e05ba56"></a>
+<a href="#"><img src="https://github.com/SamirPaulb/real-time-voice-translator/assets/77569653/f96a4115-a88f-4096-9a00-954b8527d872" alt="App GUI"></a>
 
