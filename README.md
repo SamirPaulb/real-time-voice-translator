@@ -38,7 +38,7 @@ The application is easy to use: simply select the languages you want to translat
     ```
 
 ### Program Flow:
-<a href="#"><img src="https://github.com/SamirPaulb/real-time-voice-translator/assets/77569653/0d534467-2f2d-45ed-8977-17d66a3b16fd" alt="Flowchart"></a>
+<a href="#"><img src="https://github.com/SamirPaulb/real-time-voice-translator/assets/77569653/c29f8069-fcfc-4d60-ae52-55c5516159a8" alt="Block Diagram of Voice Translator"></a>
 
 
 ### Install Windows/Linux/Mac Application <a href="https://github.com/SamirPaulb/real-time-voice-translator/releases/latest"><img src="https://user-images.githubusercontent.com/132539454/278971282-8d676023-a03a-463c-8e55-3f0afe6e3e58.svg" alt="DOWNLOAD"></a>
